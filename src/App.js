@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Form from "./components/Form";
+import { GlobolProvider } from "./context/GlobalContext";
+import Header from "./components/Header";
+import HeaderCard from "./components/HeaderCard";
+import History from "./components/History";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobolProvider>
+      <div className="main__wrapper">
+        <Header />
+        <HeaderCard />
+        <History />
+        <Form />
+      </div>
+    </GlobolProvider>
   );
 }
 

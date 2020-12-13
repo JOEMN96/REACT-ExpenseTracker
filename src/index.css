@@ -1,13 +1,131 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main__wrapper {
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.header h2 {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.header h3 {
+  padding: 10px;
+}
+.header h2:nth-child(3) {
+  padding: 10px;
+  padding-top: 0;
+  color: red;
+  font-size: 26px;
+}
+
+.header__card {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.header__card .header__card__left {
+  flex-basis: 50%;
+  padding: 10px;
+  border-right: 1px solid grey;
+  text-align: center;
+}
+.header__card .header__card__left p {
+  color: green;
+  font-weight: 600;
+  padding: 5px 0;
+}
+
+.header__card .header__card__right p {
+  color: red;
+  font-weight: 600;
+  padding: 5px 0;
+}
+
+.header__card .header__card__right {
+  flex-basis: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.header__card {
+  padding: 10px;
+}
+
+.history__wrapper h4 {
+  padding: 10px;
+}
+
+.history__card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 7px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: relative;
+}
+
+.plus {
+  border-right: 3px solid green;
+}
+.plus p:nth-child(2) {
+  color: green;
+}
+
+.minus {
+  border-right: 3px solid red;
+}
+.minus p:nth-child(2) {
+  color: red;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  padding: 10px 0;
+}
+form input {
+  padding: 5px;
+  border: 2px solid #ddd;
+}
+
+input[type="submit"] {
+  padding: 8px;
+  margin: 10px 0;
+  background-color: #adce74;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.delete {
+  color: red;
+  position: absolute;
+  left: -50px;
+  top: -2px;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  opacity: 0;
+}
+
+.view {
+  opacity: 1;
+  transition: all 1s ease;
 }
